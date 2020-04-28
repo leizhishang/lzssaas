@@ -2,6 +2,7 @@
     "name": "leizhishang/lzssaas",
     "description": "Leizhishang saas",
     "keywords": ["saas", "laravel", "leizhishang"],
+    "license": "MIT",
     "authors": [
         {
             "name": "leizhishang",
