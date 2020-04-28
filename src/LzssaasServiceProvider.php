@@ -46,7 +46,7 @@ class LzssaasServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/hstcms.php', 'hstcms'
+            __DIR__.'/../config/lzssaas.php', 'lzssaas'
         );
         //$this->app->register(RouteServiceProvider::class);
         //$this->app->register(ConsoleServiceProvider::class);
