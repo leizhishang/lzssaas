@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-    	"caffeinated/modules": "^5.2",
+    	"caffeinated/modules": "^5.2"
     },
     "autoload": {
         "psr-4": {
