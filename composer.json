@@ -10,14 +10,7 @@
         }
     ],
     "require": {
-    	"php": ">=7.0.0",
-    	"caffeinated/modules": "^4.1",
-    	"predis/predis": "^1.1",
-    	"overtrue/laravel-wechat": "~4.0",
-    	"webpatser/laravel-uuid": "^3.0",
-    	"doctrine/dbal": "^2.5",
-    	"gregwar/captcha": "1.*",
-        "gregwar/image": "2.*"
+    	"caffeinated/modules": "^5.2",
     },
     "autoload": {
         "psr-4": {
