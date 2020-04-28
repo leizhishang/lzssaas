@@ -1,0 +1,36 @@
+{
+    "name": "leizhishang/lzssaas",
+    "description": "Leizhishang saas",
+    "keywords": ["saas", "laravel", "leizhishang"],
+    "authors": [
+        {
+            "name": "leizhishang",
+            "email": "969111802@qq.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.0.0",
+    	"caffeinated/modules": "^4.1",
+    	"predis/predis": "^1.1",
+    	"overtrue/laravel-wechat": "~4.0",
+    	"webpatser/laravel-uuid": "^3.0",
+    	"doctrine/dbal": "^2.5",
+    	"gregwar/captcha": "1.*",
+        "gregwar/image": "2.*",
+    },
+    "autoload": {
+        "psr-4": {
+            "Leizhishang\\Lzssaas\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leizhishang\\Lzssaas\\LzssaasServiceProvider"
+            ],
+            "aliases": {
+                "Lzssaas": "Leizhishang\\Lzssaas\\Facades\\Lzssaas"
+            }
+        }
+    }
+}
