@@ -16,7 +16,7 @@
     	"webpatser/laravel-uuid": "^3.0",
     	"doctrine/dbal": "^2.5",
     	"gregwar/captcha": "1.*",
-        "gregwar/image": "2.*",
+        "gregwar/image": "2.*"
     },
     "autoload": {
         "psr-4": {
