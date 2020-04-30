@@ -10,7 +10,9 @@
         }
     ],
     "require": {
-    	"caffeinated/modules": "^5.2"
+    	"caffeinated/modules": "^5.2",
+        "gregwar/captcha": "1.*",
+        "predis/predis": "^1.1"
     },
     "autoload": {
         "psr-4": {
