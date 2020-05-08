@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;                //认证
 
 if ( ! function_exists('hst_config'))
 {
-	function lzssaas_config($namespace = '', $name  = null)
+    function lzssaas_config($namespace = '', $name  = null)
     {
         $arrConfig = CommonConfigModel::get($namespace, $name);
         return $arrConfig;
@@ -34,7 +34,7 @@ if ( ! function_exists('hst_config'))
 
 if ( ! function_exists('lzssaas_save_config'))
 {
-	function lzssaas_save_config($namespace, $data = array())
+    function lzssaas_save_config($namespace, $data = array())
     {
         $arrConfig = CommonConfigModel::saveVals($namespace, $data);
         return $arrConfig;
@@ -117,5 +117,45 @@ if ( ! function_exists('lzssaas_encodes'))
             $reslutstr = substr(md5($reslutstr), 0,8).$reslutstr;
         }
         return $reslutstr;
+    }
+}
+
+if ( ! function_exists('lzssaas_message_verify'))
+{
+    function lzssaas_message_verify($message  = '')
+    {
+        if(!is_array($message)) {
+            return false;
+        }
+        if(!isset($message['state'])) {
+            return false;
+        }
+        if(!isset($message['message'])) {
+            return false;
+        }
+        if($message['state'] == 'error') {
+            return true;
+        }
+        return false;
+    }
+}
+
+/**
+ * 时间戳转字符串
+ *
+ * @example Y-m-d H:i:s  2012-12-12 12:12:12
+ * @param int $timestamp 时间戳
+ * @param string $format 时间格式
+ * @param int $sOffset 时间矫正值
+ * @return string
+ */
+if ( ! function_exists('lzssaas_time2str'))
+{    
+    function lzssaas_time2str($timestamp, $format = 'Y-m-d H:i') 
+    {
+        if (!$timestamp) return '';
+        if ($format == 'auto') return hst_time2cpstr($timestamp);
+        //if ($timezone = self::getConfig('site', 'time.timezone')) $timestamp += $timezone * 3600;
+        return gmdate($format, $timestamp);
     }
 }
